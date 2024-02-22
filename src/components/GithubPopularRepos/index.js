@@ -1,9 +1,7 @@
 import {Component} from 'react'
-
 import Loader from 'react-loader-spinner'
 
 import LanguageFilterItem from '../LanguageFilterItem'
-
 import RepositoryItem from '../RepositoryItem'
 
 import './index.css'
@@ -36,12 +34,10 @@ class GithubPopularRepos extends Component {
 
   getRepositories = async () => {
     const {activeLanguageFilterId} = this.state
-
     this.setState({
       apiStatus: apiStatusConstants.inProgress,
     })
-
-    const apiUrl = `https://apis.ccbp.in/popular-repos?languages=${activeLanguageFilterId}`
+    const apiUrl = `https://apis.ccbp.in/popular-repos?language=${activeLanguageFilterId}`
     const response = await fetch(apiUrl)
     if (response.ok) {
       const fetchedData = await response.json()
@@ -53,7 +49,6 @@ class GithubPopularRepos extends Component {
         forksCount: eachRepository.forks_count,
         issuesCount: eachRepository.issues_count,
       }))
-
       this.setState({
         repositoriesData: updatedData,
         apiStatus: apiStatusConstants.success,
@@ -65,7 +60,7 @@ class GithubPopularRepos extends Component {
     }
   }
 
-  renderLoaderView = () => (
+  renderLoadingView = () => (
     <div data-testid="loader">
       <Loader color="#0284c7" height={80} type="ThreeDots" width={80} />
     </div>
@@ -78,7 +73,7 @@ class GithubPopularRepos extends Component {
         alt="failure view"
         className="failure-view-image"
       />
-      <h1 className="error-message">Something Went Wrong </h1>
+      <h1 className="error-message">Something Went Wrong</h1>
     </div>
   )
 

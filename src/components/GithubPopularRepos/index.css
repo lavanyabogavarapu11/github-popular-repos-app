@@ -1,9 +1,8 @@
-/* Write your CSS here */
 .app-container {
   display: flex;
+  justify-content: center;
   background-color: #ffffff;
   min-height: 100vh;
-  justify-content: center;
 }
 
 .responsive-container {
@@ -14,23 +13,23 @@
 }
 
 .heading {
+  color: #0f172a;
   font-family: 'Lobster';
-
   font-size: 48px;
   margin-bottom: 48px;
-  color: #0f172a;
 }
 
 .filters-list {
   display: flex;
-  list-style-type: none;
   flex-wrap: wrap;
+  list-style-type: none;
   padding: 0px;
 }
+
 .repositories-list {
   display: flex;
-  list-style-type: none;
   flex-wrap: wrap;
+  list-style-type: none;
   padding: 0px;
   max-width: 1140px;
 }
@@ -47,7 +46,7 @@
   height: 180px;
 }
 
-@media screen and(min-width:768px) {
+@media screen and (min-width: 768px) {
   .error-view-image {
     width: 527px;
     height: 393px;
@@ -57,11 +56,11 @@
 .error-message {
   text-align: center;
   color: #334155;
-  font-family: 'Bree-serif';
+  font-family: 'Bree Serif';
   font-size: 28px;
 }
 
-@media screen and(min-width:768px) {
+@media screen and (min-width: 768px) {
   .error-message {
     font-size: 48px;
   }

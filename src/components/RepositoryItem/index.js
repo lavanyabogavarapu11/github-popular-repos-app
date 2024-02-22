@@ -1,4 +1,3 @@
-// Write your code here
 import './index.css'
 
 const RepositoryItem = props => {
@@ -13,7 +12,7 @@ const RepositoryItem = props => {
 
   return (
     <li className="repository-item">
-      <img className="repository-imag" src={imageUrl} alt={name} />
+      <img className="repository-image" src={imageUrl} alt={name} />
       <h1 className="repository-name">{name}</h1>
       <div className="stats-container">
         <img
@@ -23,17 +22,14 @@ const RepositoryItem = props => {
         />
         <p className="stats-text">{starsCount} stars</p>
       </div>
-
       <div className="stats-container">
         <img
           className="stats-icon"
           src="https://assets.ccbp.in/frontend/react-js/forks-count-img.png"
           alt="forks"
         />
-
         <p className="stats-text">{forksCount} forks</p>
       </div>
-
       <div className="stats-container">
         <img
           className="stats-icon"

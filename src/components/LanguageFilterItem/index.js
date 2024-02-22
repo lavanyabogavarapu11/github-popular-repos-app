@@ -6,7 +6,6 @@ const LanguageFilterItem = props => {
   const btnClassName = isActive
     ? 'language-btn active-language-btn'
     : 'language-btn'
-
   const onClickLanguageFilter = () => {
     setActiveLanguageFilterId(id)
   }
